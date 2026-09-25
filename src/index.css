@@ -58,7 +58,7 @@ li {
 
 h1 {
   font-size: 56px;
-  color: #7342d6;
+  color: orangered;
   margin-bottom: 24px;
   text-align: center;
 }
@@ -78,8 +78,8 @@ button:active {
 }
 
 .btn {
-  background-color: #7342d6;
-  color: white;
+  background-color: orange;
+  color: black;
   padding: 12px 24px;
   font-size: 20px;
   border-radius: 4px;
@@ -87,7 +87,7 @@ button:active {
 }
 
 .purple {
-  color: #7342d6;
+  color: orangered;
 }
 
 .logo {
@@ -109,7 +109,7 @@ button:active {
   font-size: 20px;
   font-weight: bold;
   padding: 8px;
-  color: #7342d6;
+  color: orangered;
 }
 
 .nav__list {
@@ -124,7 +124,7 @@ button:active {
 }
 
 .nav__link--primary {
-  border: 2px solid #7342d6;
+  border: 2px solid orangered;
   border-radius: 4px;
 }
 
@@ -136,7 +136,7 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #7342d6;
+  color: orangered;
   font-size: 20px;
   position: relative;
   margin-left: 8px;
@@ -162,7 +162,7 @@ button:active {
   background-color: transparent;
   font-size: 32px;
   border: none;
-  color: #7342d6;
+  color: orangered;
   display: none;
 }
 

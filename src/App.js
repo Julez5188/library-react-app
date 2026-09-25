@@ -2,6 +2,7 @@ import './index.css';
 import Nav from './components/Nav';
 import Landing from './components/Landing';
 import Highlights from './components/Highlights';
+import Features from './components/Features';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Nav />
       <Landing />
       <Highlights /> 
+      <Features />
     </div>
   );
 }
