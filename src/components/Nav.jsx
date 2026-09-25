@@ -21,7 +21,7 @@ const Nav = () => {
             </a>
           </li>
           <button className="btn__menu">
-            <fontAwesomeIcon icon="bars" />
+            <FontAwesomeIcon icon="bars" />
           </button>
         </ul>
       </div>
