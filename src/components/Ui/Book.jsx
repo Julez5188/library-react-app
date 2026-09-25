@@ -6,6 +6,7 @@ const Book = ({ book }) => {
     <div className="book">
       <a href="">
         <figure className="book__img--wrapper">
+          console.log({book})
           <img src={book.url} alt="" className="book__img" />
         </figure>
       </a>
@@ -28,7 +29,7 @@ const Book = ({ book }) => {
             {book.salePrice}
           </>
         ) : (
-          "null"
+          book.originalPrice
         )}
       </div>
     </div>
