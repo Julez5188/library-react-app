@@ -19,10 +19,6 @@ const Features = () => {
             .map((book) => {
               <Book book={book} key={book.id}/>
             })}
-            
-            <Book />
-            <Book />
-            <Book />
           </div>
         </div>
       </div>
