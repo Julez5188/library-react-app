@@ -1,5 +1,4 @@
 import React from 'react';
-import { books } from '../data';
 import Book from '../components/Ui/Book'
 
 const Books = ({ books }) => {
