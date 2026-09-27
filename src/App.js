@@ -1,9 +1,10 @@
 import React from 'react';
 import { books } from './data';
 import Nav from './components/Nav';
-import Home from './components/Home';
+import Home from './pages/Home';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Books from './pages/Books';
 
 function App() {
     return (
