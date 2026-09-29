@@ -19,13 +19,13 @@ const Book = ({ book }) => {
           <FontAwesomeIcon icon="star" key={index} />
         )}
         {
-          !Number.isInteger(book.rating) && <FontAwesomeIcon icon="star=half=alt" />
+          !Number.isInteger(book.rating) && <FontAwesomeIcon icon="star-half-alt" />
         }
       </div>
       <div className="book__price">
         {book.salePrice ? (
           <>
-            <span book__price--normal>${book.originalPrice.toFixed(2)}</span>$
+            <span className="book__price--normal">${book.originalPrice.toFixed(2)}</span>$
             {book.salePrice.toFixed(2)}
           </>
         ) : (
