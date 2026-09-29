@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { books } from './data';
 import Nav from './components/Nav';
 import Home from './pages/Home';
@@ -9,6 +9,12 @@ import BookInfo from './pages/BookInfo';
 import Cart from './pages/Cart';
 
 function App() {
+  const [cart, setCart] = useState([]);
+
+  function addToCart() {
+    console.log("Add to cart");
+  }
+
   return (
     <Router>
         <div className="App">
@@ -16,7 +22,7 @@ function App() {
              <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/books" element={<Books books={books} />} />
-                <Route exact path="/books/1" element={<BookInfo books={books} />} />
+                <Route exact path="/books/1" element={<BookInfo books={books} addToCart={addToCart} />} />
                 <Route path="/cart" element={<Cart books={books} />} />
             </Routes>
             <Footer />

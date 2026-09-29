@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Rating from '../components/Ui/Rating';
 import Price from '../components/Ui/Price';
 
-const BookInfo = ({ books }) => {
+const BookInfo = ({ books, addToCart }) => {
     return (
         <div id="books__body">
             <main id="books__main">
@@ -25,11 +25,24 @@ const BookInfo = ({ books }) => {
                         </div>
                         <div className="book__selected--description">
                             <h2 className="book__selected--title">Crack the Coding Interview</h2>
-                            <p className="book__selected--para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio eveniet vero debitis ad possimus soluta, dignissimos beatae illo laboriosam eaque magni ducimus eius veritatis fugiat aliquid ipsam in! Molestiae, blanditiis?</p>
                             <Rating rating="4.5" />
                             <div className="book__selected--price">
                                 <Price originalPrice={50} salePrice={25} />
                             </div>
+                            <div className="book__summary">
+                                <div className="book__summary--title">
+                                    Summary
+                                </div>
+                                <p className="book__summary--para">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, esse fuga culpa incidunt inventore dolore, sint iste modi qui quas ut fugit necessitatibus, tempora recusandae odio! Aliquid, dolorem illum. Tenetur.
+                                </p>
+                                 <p className="book__summary--para">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, esse fuga culpa incidunt inventore dolore, sint iste modi qui quas ut fugit necessitatibus, tempora recusandae odio! Aliquid, dolorem illum. Tenetur.
+                                </p>
+                            </div>
+                            <button className="btn">
+                                Add to Cart
+                            </button>
                         </div>
                     </div>
                 </div>
