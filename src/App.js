@@ -13,9 +13,9 @@ function App() {
         <div className="App">
             <Nav />
              <Routes>
-                <Route exact path="/" component={Home} />
-                <Route path="/books" render={() => <Books books={books} />} />
-                <Route path="/books/1" render={() => <BookInfo books={books} />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/books" element={<Books books={books} />} />
+                <Route path="/books/1" element={<BookInfo books={books} />} />
             </Routes>
             <Footer />
         </div>
