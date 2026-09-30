@@ -1,11 +1,8 @@
 import React from "react";
-<<<<<<< HEAD
 import Rating from "./Rating";
-=======
 import { Link } from "react-router-dom";
 import Rating from "./Rating";
 import Price from "./Price";
->>>>>>> ec2676fd9ba756ab88eb57382af035524c685c08
 
 const Book = ({ book }) => {
   return (
@@ -18,8 +15,7 @@ const Book = ({ book }) => {
       <div className="book__title">
         <Link to="/books/1" className="book__title--link">
           {book.title}
-<<<<<<< HEAD
-        </a>
+        </Link>
       </div>
       <Rating rating={book.rating} />
       <div className="book__price">
@@ -32,14 +28,6 @@ const Book = ({ book }) => {
           <>{book.originalPrice.toFixed(2)}</>
         )}
       </div>
-=======
-        </Link>
-      </div>
-     <Rating rating={book.rating} />
-      <div className="book__price">
-       <Price salePrice={book.salePrice} originalPrice={book.originalPrice} />
-       </div>
->>>>>>> ec2676fd9ba756ab88eb57382af035524c685c08
     </div>
   );
 };
