@@ -18,7 +18,7 @@ const Cart = () => {
                         <div className="cart__body">
                             <div className="cart__item">
                                 <div className="cart__book">
-                                    <img src="https://m.media-amazon.com/images/I/81ANaVZk5LL._AC_UF1000,1000_QL80_.jpg" className="cart__book--img" alt="" className="cart__book--img" />
+                                    <img src="https://m.media-amazon.com/images/I/81ANaVZk5LL._AC_UF1000,1000_QL80_.jpg" className="cart__book--img" alt="" />
                                     <div className="cart__book--info">
                                         <span className="cart__book--title">
                                             Atomic Habits

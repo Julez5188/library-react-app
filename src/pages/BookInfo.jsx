@@ -1,6 +1,6 @@
-import React, { useParams } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Rating from '../components/Ui/Rating';
 import Price from '../components/Ui/Price';
 
