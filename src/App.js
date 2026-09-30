@@ -23,12 +23,12 @@ function App() {
           }
         }
         else {
-          return item
+          return item;
         }
-      };
+      })
     );
     } else {
-      setCart{[...cart, {...book, quantity: 1 }]};
+      setCart([...cart, {...book, quantity: 1 }]);
     }
   }
 
