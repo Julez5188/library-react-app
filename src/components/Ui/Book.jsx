@@ -1,17 +1,24 @@
 import React from "react";
+<<<<<<< HEAD
 import Rating from "./Rating";
+=======
+import { Link } from "react-router-dom";
+import Rating from "./Rating";
+import Price from "./Price";
+>>>>>>> ec2676fd9ba756ab88eb57382af035524c685c08
 
 const Book = ({ book }) => {
   return (
     <div className="book">
-      <a href="/">
+      <Link to="/books/1">
         <figure className="book__img--wrapper">
           <img src={book.url} alt="" className="book__img" />
         </figure>
-      </a>
+      </Link>
       <div className="book__title">
-        <a href="/" className="book__title--link">
+        <Link to="/books/1" className="book__title--link">
           {book.title}
+<<<<<<< HEAD
         </a>
       </div>
       <Rating rating={book.rating} />
@@ -25,6 +32,14 @@ const Book = ({ book }) => {
           <>{book.originalPrice.toFixed(2)}</>
         )}
       </div>
+=======
+        </Link>
+      </div>
+     <Rating rating={book.rating} />
+      <div className="book__price">
+       <Price salePrice={book.salePrice} originalPrice={book.originalPrice} />
+       </div>
+>>>>>>> ec2676fd9ba756ab88eb57382af035524c685c08
     </div>
   );
 };
