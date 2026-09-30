@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { books } from './data';
 import Nav from './components/Nav';
 import Home from './pages/Home';
@@ -12,8 +12,29 @@ function App() {
   const [cart, setCart] = useState([]);
 
   function addToCart(book) {
-    console.log('add to cart', book)
+    const dupeItem = cart.find(item => +item.id === +book.id)
+    if (dupeItem) {
+      dupeItem.quantity += 1;
+      setCart(cart.map(item => {
+        if (item.id === dupeItem.id) {
+          return {
+            ...item,
+            quantity: item.quantity +1,
+          }
+        }
+        else {
+          return item
+        }
+      };
+    );
+    } else {
+      setCart{[...cart, {...book, quantity: 1 }]};
+    }
   }
+
+  useEffect(() => {
+    console.log(cart);
+  }, [cart])
 
   return (
     <Router>

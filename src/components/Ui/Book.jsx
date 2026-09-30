@@ -17,7 +17,10 @@ const Book = ({ book }) => {
       </div>
       <Rating rating={book.rating} />
       <div className="book__price">
-        <Price price={book.price } />
+        <Price
+          originalPrice={book.originalPrice}
+            salePrice={book.salePrice}
+        />
       </div>
     </div>
   );
