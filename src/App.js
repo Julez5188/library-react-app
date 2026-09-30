@@ -9,11 +9,12 @@ import BookInfo from './pages/BookInfo';
 import Cart from './pages/Cart';
 
 function App() {
-  const [Cart, setCart] => { 
+  const [cart, setCart] = useState([]);
 
-  function addToCart() {
-    console.log("Add to cart");
-  }}
+  function addToCart(book) {
+    console.log('add to cart', book)
+  }
+
   return (
     <Router>
         <div className="App">
@@ -21,7 +22,8 @@ function App() {
              <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route path="/books" element={<Books books={books} />} />
-                <Route path="/books/1" element={<BookInfo books={books} />} />
+                <Route path="/books/1" element={<BookInfo books={books} addToCart={addToCart} />} />
+                <Route path="/cart" element={<Cart books={books} /> } />
             </Routes>
             <Footer />
         </div>

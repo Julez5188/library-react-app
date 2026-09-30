@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useParams } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import Rating from '../components/Ui/Rating';
 import Price from '../components/Ui/Price';
 
 const BookInfo = ({ books, addToCart }) => {
+    const { id } = useParams();
+    const book = books.find((book) => +book.id === +id);
+
     return (
-h2id="books__body">
+<div id="books__body">
             <main id="books__main">
                 <div className="books__container">
                     <div className="row">
@@ -40,7 +43,7 @@ h2id="books__body">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, esse fuga culpa incidunt inventore dolore, sint iste modi qui quas ut fugit necessitatibus, tempora recusandae odio! Aliquid, dolorem illum. Tenetur.
                                 </p>
                             </div>
-                            <button className="btn">
+                            <button className="btn" onClick={() => addToCart(book)}>
                                 Add to Cart
                             </button>
                         </div>
