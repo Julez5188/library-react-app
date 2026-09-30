@@ -1,5 +1,5 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Rating from "./Rating";
 
 const Book = ({ book }) => {
   return (
@@ -14,18 +14,11 @@ const Book = ({ book }) => {
           {book.title}
         </a>
       </div>
-      <div className="book__ratings">
-        {new Array(Math.floor(book.rating)).fill(0).map((_, index) =>
-          <FontAwesomeIcon icon="star" key={index} />
-        )}
-        {
-          !Number.isInteger(book.rating) && <FontAwesomeIcon icon="star=half=alt" />
-        }
-      </div>
+      <Rating rating={book.rating} />
       <div className="book__price">
         {book.salePrice ? (
           <>
-            <span book__price--normal>${book.originalPrice.toFixed(2)}</span>$
+            <span className="book__price--normal">${book.originalPrice.toFixed(2)}</span>$
             {book.salePrice.toFixed(2)}
           </>
         ) : (
