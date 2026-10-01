@@ -31,7 +31,7 @@ const Nav = () => {
           <button className="btn__menu" onClick={openMenu}>
             <FontAwesomeIcon icon="bars" />
           </button>
-          <li className="Nav__icon">
+          <li className="nav__icon">
             <Link to="/cart" className="nav__link">
               <FontAwesomeIcon icon="shopping-cart" />
             </Link>
