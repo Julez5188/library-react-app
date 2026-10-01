@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cart = () => {
+const Cart = ({ cart }) => {
     return (
       <div id="books__body">
         <main id="books__main">
@@ -16,6 +16,13 @@ const Cart = () => {
                             <span className="cart__total">Price</span>
                         </div>
                         <div className="cart__body">
+                            {
+                                cart.map(book => {
+                                    return (
+                                        
+                                    )
+                                })
+                            }
                             <div className="cart__item">
                                 <div className="cart__book">
                                     <img src="https://m.media-amazon.com/images/I/81ANaVZk5LL._AC_UF1000,1000_QL80_.jpg" className="cart__book--img" alt="" />
