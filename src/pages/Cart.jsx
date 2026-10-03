@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 const Cart = ({ cart, changeQuantity, removeItem }) => {
 
     const total = () => {
-         let price = 0;
-         cart.forEach((item) => {
+        let price = 0;
+        cart.forEach((item) => {
             price += +((item.salePrice || item.originalPrice) * item.quantity).toFixed(2);
         });
         return price;
     }
-    
+
     return (
         <div id="books__body">
             <main id="books__main">
@@ -66,45 +66,48 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                                             </div>
 
                                             <div className="cart__total">
-                                                ${((book.salePrice || book.originalPrice) * book.quantity)}
+                                                ${((book.salePrice || book.originalPrice) * book.quantity).toFixed(2)}
                                             </div>
                                         </div>
                                     );
                                 })}
                             </div>
-                        </div>
-                                <div className="cart__empty">
+                            {
+                                cart.length === 0 && <div className="cart__empty">
                                     <img src={EmptyCart} alt="" className="cart__empty--img" />
                                     <h2>You don't have any books in your cart!</h2>
                                     <Link to="/books">
                                         <button className="btn">Browse Books</button>
                                     </Link>
                                 </div>
-                        <div className="total">
-                            <div className="total__item total__sub-total">
-                                <span>Subtotal</span>
-                                <span>${(total() * 0.9).toFixed(2)}</span>
-                            </div>
-
-                            <div className="total__item total__tax">
-                                <span>Tax</span>
-                                <span>${(total() * 0.1).toFixed(2)}</span>
-                            </div>
-
-                            <div className="total__item total__price">
-                                <span>Total</span>
-                                <span>${total().toFixed(2)}</span>
-                            </div>
-
-                            <button
-                                className="btn btn__checkout no-cursor"
-                                onClick={() =>
-                                    alert("Haven't got around to doing this :(")
-                                }
-                            >
-                                Proceed to Checkout
-                            </button>
+                            }
                         </div>
+                        {cart.length &&
+                            <div className="total">
+                                <div className="total__item total__sub-total">
+                                    <span>Subtotal</span>
+                                    <span>${(total() * 0.9).toFixed(2)}</span>
+                                </div>
+
+                                <div className="total__item total__tax">
+                                    <span>Tax</span>
+                                    <span>${(total() * 0.1).toFixed(2)}</span>
+                                </div>
+
+                                <div className="total__item total__price">
+                                    <span>Total</span>
+                                    <span>${total().toFixed(2)}</span>
+                                </div>
+
+                                <button
+                                    className="btn btn__checkout no-cursor"
+                                    onClick={() =>
+                                        alert("Haven't got around to doing this :(")
+                                    }
+                                >
+                                    Proceed to Checkout
+                                </button>
+                            </div>}
                     </div>
                 </div>
             </main>

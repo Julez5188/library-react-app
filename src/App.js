@@ -28,7 +28,7 @@ function App() {
   }
 
   function removeItem(item) {
-    setCart(cart.filter(book => book.id !== item.id))
+   setCart(cart.filter(book => book.id !== item.id))
   }
 
   useEffect(() => {
