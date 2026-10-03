@@ -6,7 +6,7 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
 
     const total = () => {
          let price = 0;
-        cart.forEach((item) => {
+         cart.forEach((item) => {
             price += +((item.salePrice || item.originalPrice) * item.quantity).toFixed(2);
         });
         return price;
@@ -48,7 +48,7 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
                                                         {(book.salePrice || book.originalPrice).toFixed(2)}
                                                     </span>
 
-                                                    <button className="cart__book--remove" onClick={removeItem}>
+                                                    <button className="cart__book--remove" onClick={() => removeItem(book)}>
                                                         Remove
                                                     </button>
                                                 </div>
