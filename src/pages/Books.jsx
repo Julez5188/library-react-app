@@ -3,7 +3,7 @@ import Book from '../components/Ui/Book';
 
 const Books = ({ books: initialBooks }) => {
   const [books, setBooks] = useState(initialBooks);
-  const [loading, setLoading] = useState(true);
+
   function filterBooks(filter) {
     console.log(filter)
     if (filter === 'LOW_TO_HIGH') {
@@ -36,9 +36,6 @@ const Books = ({ books: initialBooks }) => {
                   books.map((book) => (
                     <Book book={book} key={book.nid} />
                   ))
-                }
-                {
-                  setLoading(false)
                 }
               </div>
             </div>
