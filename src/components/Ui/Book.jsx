@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Rating from "./Rating";
 import { Link } from "react-router-dom";
 import Price from "./Price";
 const Book = ({ book }) => {
-  function imageLoaded() => {
-  console.log('imageLoaded')
-}
+  const [img, setImg] = useState();
+
+  useEffect(() => {
+    const image = new Image();
+    image.src = book.url;
+    image.onload = () = {
+      setImg(image);
+    }
+  })
+
 return (
   <div className="book">
     {img ? (
       <>
         <Link to={`/books/${book.id}`}>
           <figure className="book__img--wrapper">
-            <img src={book.url} alt="" className="book__img" onLoad={imageLoaded} />
+            <img src={book.url} alt=""  className="book__img" onLoad={imageLoaded} />
           </figure>
         </Link>
         <div className="book__title">
